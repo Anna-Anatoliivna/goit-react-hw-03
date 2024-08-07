@@ -19,10 +19,14 @@ const App = () => {
   
   
   const onContactForm = (contact) => {
-    console.log('contact: ', contact);
-  
-}
+    const finalContact = {
+      ...contact,
+      id: nanoid(),
+    };
+    setContacts([finalContact, ...contacts])
+  };
 
+ 
   const handleFilter = (e) => {
     const value = e.target.value;
     setFilterValue(value)
