@@ -1,13 +1,8 @@
 import {Contact} from '../Contact/Contact'
 import styles from './ContactList.module.css'
 
-export const ContactList = ({ contacts }) => {
-//     const handleClick = (userName) => {
-// console.log('userName: ', userName);
-    //         }
-     const onDelContact = (contactId) => {
-    setContacts(contacts.filter((item) => item.id !== contactId));
-  };
+export const ContactList = ({ contacts, onDelContact }) => {
+
        
     return (
         <div className={styles.box}>
