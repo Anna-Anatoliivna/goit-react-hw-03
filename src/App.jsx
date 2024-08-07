@@ -1,8 +1,9 @@
 import { useState } from 'react'
-// import { ContactForm } from './components/ContactForm/ContactForm'
+import { ContactForm } from './components/ContactForm/ContactForm'
 import { SearchBox } from './components/SearchBox/SearchBox'
 import { ContactList } from './components/ContactList/ContactList'
-// import {Contact} from './components/Contact/Contact'
+import { nanoid } from 'nanoid'
+
 
 import './App.css'
 
@@ -16,7 +17,11 @@ const App = () => {
   )
   const [filterValue, setFilterValue] = useState('');
   
-
+  
+  const onContactForm = (contact) => {
+    console.log('contact: ', contact);
+  
+}
 
   const handleFilter = (e) => {
     const value = e.target.value;
@@ -32,7 +37,7 @@ const App = () => {
     <div>
       <>
         <h1>Phonebook</h1>
-        {/* <ContactForm /> */}
+        <ContactForm onContactForm={onContactForm} />
         <SearchBox handleFilter={handleFilter} value={filterValue} onChange={handleFilter}/>
         <ContactList contacts={filteredContacts} />
       </>
