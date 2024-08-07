@@ -22,3 +22,9 @@
   font-size: 20px;
   border: 2px solid #6d6d6d;
 }
+.err {
+  display: inline-block;
+  font-size: 14px;
+  color: red;
+  padding: 5px;
+}
